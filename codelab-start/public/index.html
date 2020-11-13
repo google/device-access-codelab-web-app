@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Device Access Codelab</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script type="application/javascript" src="./scripts.js"></script>
+  </head>
+  <body>
+    <h1>Device Access Codelab</h1>
+    <table style="width:100%">
+      <tr>
+        <td style="width: 0; max-width: 0;">
+          <div id="partner-credentials" class="box">
+            <h2>Project Credentials</h2>
+            <label>Client Id:</label>
+            <br/>
+            <input id="clientId" type="string" onkeyup="typeClientId()">
+            <br/>
+            <label>Client Secret:</label>
+            <br/>
+            <input id="clientSecret" type="string" onkeyup="typeClientSecret()">
+            <br/>
+            <label>Project Id:</label>
+            <br/>
+            <input id="projectId" type="string" onkeyup="typeProjectId()">
+            <br/><br/>
+            <button id="btnSignIn"
+             onclick="signInOut();">Sign in
+           </button>
+          </div>
+        </td>
+        <td style="width: 0; max-width: 0;">
+          <div id="oauth-flow" class="box">
+            <h2>Authentication Flow</h2>
+            <label>OAuth Code:</label>
+            <br/>
+            <label id="oauthCode">
+              [OAuth Code...]
+            </label>
+            <br/>
+            <label>Access Token:</label>
+            <br/>
+            <label id="accessToken">
+              [Access Token...]
+            </label>
+            <br/>
+            <label>Refresh Token:</label>
+            <br/>
+            <label id="refreshToken">
+              [Refresh Token...]
+            </label>
+            <br/><br/>
+            <button id="btnListDevices"
+              onclick="listDevices();">List Devices
+            </button>
+          </div>
+        </td>
+        <td style="width: 0; max-width: 0;">
+          <div id="device-control" class="box">
+            <h2>Device Control</h2>
+            <select id="sctDeviceSelect" style="max-width: 200px;" onchange="selectDevice();"></select>
+            <br/><br/>
+            <label>Mode:</label>
+            <select id="tempMode" style="margin-bottom: 8px">
+              <option value="OFF">Off</option>
+              <option value="HEAT">Heat</option>
+              <option value="COOL">Cool</option>
+              <option value="HEATCOOL">HeatCool</option>
+            </select>
+            <br/>
+            <label>Heat Temp: </label> <input id="heatCelsius" style="margin-bottom: 8px" type="number" min="15.0" max="30.0"> °C
+            <br/>
+            <label>Cool Temp: </label> <input id="coolCelsius" style="margin-bottom: 8px" type="number" min="15.0" max="30.0"> °C
+            <br/><br/>
+            <button onclick="postThermostatMode();">Set Mode</button>
+            <button onclick="postTemperatureSetpoint();">Set Temp</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <script type="application/javascript">
+      init();
+    </script>
+  </body>
+</html>

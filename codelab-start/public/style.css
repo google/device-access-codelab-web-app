@@ -1,0 +1,53 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: #444444;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+    background-color: #818488;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px;
+    text-align: center;
+}
+
+div.box {
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+}
+
+button {
+    background-color: #f4f8ff;
+    font-family: Roboto,sans-serif;
+    color: #444444;
+    padding: 4px;
+    margin: 4px;
+
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+textarea {
+    background-color: #f7f8f9;
+    font-family: Roboto,sans-serif;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-decoration: none;
+}
+
+td {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
